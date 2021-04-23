@@ -43,6 +43,34 @@ namespace Program
             }
         }
 
+        //Вывод данных
+        public static void ShowAnimal()
+        {
+            Console.Clear();
+            foreach (var item in Animals)
+            {
+                Console.WriteLine(item.AnimalToString());
+            }
+            Console.ReadKey();
+        }
+
+        //Поиск данных
+        public static void SearchAnimal()
+        {
+            Console.Clear();
+            Console.Write("Введите текст для поиска: ");
+            string searchText = Console.ReadLine();
+
+            foreach (var item in Animals)
+            {
+                if (item.IsContains(searchText))
+                {
+                    Console.WriteLine(item.AnimalToString());
+                }
+            }
+            Console.ReadKey();
+        }
+
         //Ввод данных Птицы
         public static Bird SetBird()
         {
@@ -194,34 +222,6 @@ namespace Program
             {
                 throw ex;
             }
-        }
-
-        //Вывод данных
-        public static void ShowAnimal()
-        {
-            Console.Clear();
-            foreach (var item in Animals)
-            {
-                Console.WriteLine(item.AnimalToString());
-            }
-            Console.ReadKey();
-        }
-
-        //Поиск данных
-        public static void SearchAnimal()
-        {
-            Console.Clear();
-            Console.Write("Введите текст для поиска: ");
-            string searchText = Console.ReadLine();
-
-            foreach (var item in Animals)
-            {
-                if (item.IsContains(searchText))
-                {
-                    Console.WriteLine(item.AnimalToString());
-                }
-            }
-            Console.ReadKey();
         }
     }
 }
