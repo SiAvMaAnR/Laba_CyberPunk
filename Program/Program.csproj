@@ -51,9 +51,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryStates\LibraryStates.csproj">
-      <Project>{7f0767a1-4358-46f0-a649-986f32d52fd4}</Project>
-      <Name>LibraryStates</Name>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryAnimals\LibraryAnimals.csproj">
+      <Project>{640592e2-2425-46f2-9867-20b625beceab}</Project>
+      <Name>LibraryAnimals</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

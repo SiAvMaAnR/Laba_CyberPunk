@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные со сборкой.
-[assembly: AssemblyTitle("LibraryStates")]
+[assembly: AssemblyTitle("LibraryAnimals")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LibraryStates")]
+[assembly: AssemblyProduct("LibraryAnimals")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("7f0767a1-4358-46f0-a649-986f32d52fd4")]
+[assembly: Guid("640592e2-2425-46f2-9867-20b625beceab")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

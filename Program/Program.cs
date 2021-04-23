@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibraryStates;
+using LibraryAnimals;
+
 
 namespace Program
 {
@@ -16,9 +17,9 @@ namespace Program
                 PrintMenu();
                 switch (Console.ReadLine())
                 {
-                    case "1": Logic.AddState(); break;
-                    case "2": Logic.ShowState();  break;
-                    case "3": Logic.SearchState(); break;
+                    case "1": Logic.AddAnimal(); break;
+                    case "2": Logic.ShowAnimal();  break;
+                    case "3": Logic.SearchAnimal(); break;
                     case "4": Environment.Exit(1); break;
                 }
             }
@@ -27,9 +28,9 @@ namespace Program
         static void PrintMenu()
         {
             Console.Clear();
-            Console.WriteLine(" 1 - Добавить государство");
-            Console.WriteLine(" 2 - Вывод списка государств");
-            Console.WriteLine(" 3 - Поиск по государствам");
+            Console.WriteLine(" 1 - Добавить животное");
+            Console.WriteLine(" 2 - Вывод списка животных");
+            Console.WriteLine(" 3 - Поиск по животным");
             Console.WriteLine(" 4 - Выход из приложения");
             Console.Write("Выберите нужный вариант: ");
         }

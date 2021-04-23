@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryStates
+namespace LibraryAnimals
 {
-    public abstract class State
+    public abstract class Animal
     {
-        //Название
+        //Имя
         private string name;
         public string Name
         {
@@ -22,39 +22,39 @@ namespace LibraryStates
             }
         }
 
-        //Столица
-        private string capital;
-        public string Capital
+        //Масса
+        private int weight;
+        public int Weight
         {
             get
             {
-                return capital;
+                return weight;
             }
             set
             {
-                capital = value;
+                weight = value;
             }
         }
 
-        //Количество лет
-        private int yearOfFoundation;
-        public int YearOfFoundation
+        //Возраст
+        private int age;
+        public int Age
         {
             get
             {
-                return yearOfFoundation;
+                return age;
             }
             set
             {
-                yearOfFoundation = value;
+                age = value;
             }
         }
 
-        //Вернуть форму государства
-        public abstract string GetTypeStates();
+        //Вернуть форму животного
+        public abstract string GetTypeAnimal();
 
-        //Вывести государство в консоль
-        public abstract string StateToString();
+        //Вывести животное в консоль
+        public abstract string AnimalToString();
 
         //Проверка на содержание в полях совпадений
         public abstract bool IsContains(string searchText);

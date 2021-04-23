@@ -1,4 +1,4 @@
-﻿using LibraryStates;
+﻿using LibraryAnimals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,32 +9,32 @@ namespace Program
 {
     class Logic
     {
-        private static List<State> states = new List<State>();
-        public static List<State> States 
+        private static List<Animal> animals = new List<Animal>();
+        public static List<Animal> Animals
         { 
             get
             {
-                return states;
+                return animals;
             }
             set
             {
-                states = value;
+                animals = value;
             }
         }
 
         //Добавление данных
-        public static void AddState()
+        public static void AddAnimal()
         {
             Console.Clear();
-            Console.WriteLine("1 - Республика / 2 - Монархия / 3 - Королевство");
+            Console.WriteLine("1 - Птица / 2 - Млекопитающее / 3 - Парнокопытное");
             Console.Write("Сделайте выбор: ");
             try
             {
                 switch (Console.ReadLine())
                 {
-                    case "1": States.Add(SetRepublic()); break;
-                    case "2": States.Add(SetMonarchy()); break;
-                    case "3": States.Add(SetKingdom()); break;
+                    case "1": Animals.Add(SetBird()); break;
+                    case "2": Animals.Add(SetMammal()); break;
+                    case "3": Animals.Add(SetClovenHoofed()); break;
                 }
             }
             catch(Exception ex)
@@ -43,8 +43,8 @@ namespace Program
             }
         }
 
-        //Ввод данных республики
-        public static Republic SetRepublic()
+        //Ввод данных Птицы
+        public static Bird SetBird()
         {
             try
             {
@@ -53,43 +53,40 @@ namespace Program
                 string Name;
                 do
                 {
-                    Console.Write("Введите Название: ");
+                    Console.Write("Введите имя животного: ");
                     Name = Console.ReadLine();
                 }
                 while (string.IsNullOrEmpty(Name));
 
-                string Capital;
+                int Weight;
                 do
                 {
-                    Console.Write("Введите Столицу: ");
-                    Capital = Console.ReadLine();
+                    Console.Write("Введите массу животного: ");
                 }
-                while (string.IsNullOrEmpty(Capital));
+                while (!int.TryParse(Console.ReadLine(), out Weight));
 
-                int YearOfFoundation;
+                int Age;
                 do
                 {
                     Console.Write("Введите Возраст: ");
                 }
-                while (!int.TryParse(Console.ReadLine(), out YearOfFoundation));
+                while (!int.TryParse(Console.ReadLine(), out Age));
 
-                string President;
+                int FlightAltitude;
                 do
                 {
-                    Console.Write("Введите Президента: ");
-                    President = Console.ReadLine();
+                    Console.Write("Введите высоту полета: ");
                 }
-                while (string.IsNullOrEmpty(President));
+                while (!int.TryParse(Console.ReadLine(), out FlightAltitude));
 
-                string KindOfRepublic;
+                int FlightSpeed;
                 do
                 {
-                    Console.Write("Введите Вид республики: ");
-                    KindOfRepublic = Console.ReadLine();
+                    Console.Write("Введите скорость полета: ");
                 }
-                while (string.IsNullOrEmpty(KindOfRepublic));
+                while (!int.TryParse(Console.ReadLine(), out FlightSpeed));
 
-                return new Republic(Name,Capital,YearOfFoundation,President,KindOfRepublic);
+                return new Bird(Name,Weight,Age,FlightAltitude,FlightSpeed);
             }
             catch(Exception ex) 
             {
@@ -97,8 +94,8 @@ namespace Program
             };
         }
 
-        //Ввод данных монархии
-        public static Monarchy SetMonarchy()
+        //Ввод данных Млекопитающего
+        public static Mammal SetMammal()
         {
             try
             {
@@ -107,44 +104,40 @@ namespace Program
                 string Name;
                 do
                 {
-                    Console.Write("Введите Название: ");
+                    Console.Write("Введите имя животного: ");
                     Name = Console.ReadLine();
                 }
                 while (string.IsNullOrEmpty(Name));
 
-                string Capital;
+                int Weight;
                 do
                 {
-                    Console.Write("Введите Столицу: ");
-                    Capital = Console.ReadLine();
+                    Console.Write("Введите массу животного: ");
                 }
-                while (string.IsNullOrEmpty(Capital));
+                while (!int.TryParse(Console.ReadLine(), out Weight));
 
-                int YearOfFoundation;
+                int Age;
                 do
                 {
                     Console.Write("Введите Возраст: ");
                 }
-                while (!int.TryParse(Console.ReadLine(), out YearOfFoundation));
+                while (!int.TryParse(Console.ReadLine(), out Age));
 
-                string Monarch;
+                int Speed;
                 do
                 {
-                    Console.Write("Введите Монарха: ");
-                    Monarch = Console.ReadLine();
+                    Console.Write("Введите скорость бега: ");
                 }
-                while (string.IsNullOrEmpty(Monarch));
+                while (!int.TryParse(Console.ReadLine(), out Speed));
 
-
-                string KindOfMonarchy;
+                int FoodRation;
                 do
                 {
-                    Console.Write("Введите Вид монархии: ");
-                    KindOfMonarchy = Console.ReadLine();
+                    Console.Write("Введите пищевой рацион: ");
                 }
-                while (string.IsNullOrEmpty(KindOfMonarchy));
-                
-                return new Monarchy(Name, Capital, YearOfFoundation, Monarch, KindOfMonarchy);
+                while (!int.TryParse(Console.ReadLine(), out FoodRation));
+
+                return new Mammal(Name, Weight, Age, Speed, FoodRation);
             }
             catch (Exception ex)
             {
@@ -152,8 +145,8 @@ namespace Program
             }
         }
 
-        //Ввод данных королевства
-        public static Kingdom SetKingdom()
+        //Ввод данных Парнокопытного
+        public static ClovenHoofed SetClovenHoofed()
         {
             try
             {
@@ -162,43 +155,40 @@ namespace Program
                 string Name;
                 do
                 {
-                    Console.Write("Введите Название: ");
+                    Console.Write("Введите имя животного: ");
                     Name = Console.ReadLine();
-                } 
+                }
                 while (string.IsNullOrEmpty(Name));
 
-                string Capital;
+                int Weight;
                 do
                 {
-                    Console.Write("Введите Столицу: ");
-                    Capital = Console.ReadLine();
+                    Console.Write("Введите массу животного: ");
                 }
-                while (string.IsNullOrEmpty(Capital));
+                while (!int.TryParse(Console.ReadLine(), out Weight));
 
-                int YearOfFoundation;
+                int Age;
                 do
                 {
                     Console.Write("Введите Возраст: ");
                 }
-                while (!int.TryParse(Console.ReadLine(), out YearOfFoundation));
+                while (!int.TryParse(Console.ReadLine(), out Age));
 
-                string King;
+                int HoofDiameter;
                 do
                 {
-                    Console.Write("Введите Короля: ");
-                    King = Console.ReadLine();
+                    Console.Write("Введите диаметр копыта: ");
                 }
-                while (string.IsNullOrEmpty(King));
+                while (!int.TryParse(Console.ReadLine(), out HoofDiameter));
 
-                string KindOfKingdom;
+                int BodyLength;
                 do
                 {
-                    Console.Write("Введите Вид королевства: ");
-                    KindOfKingdom = Console.ReadLine();
+                    Console.Write("Введите длина тела: ");
                 }
-                while (string.IsNullOrEmpty(KindOfKingdom));
+                while (!int.TryParse(Console.ReadLine(), out BodyLength));
 
-                return new Kingdom(Name, Capital, YearOfFoundation, King, KindOfKingdom);
+                return new ClovenHoofed(Name, Weight, Age, HoofDiameter, BodyLength);
             }
             catch (Exception ex)
             {
@@ -207,28 +197,28 @@ namespace Program
         }
 
         //Вывод данных
-        public static void ShowState()
+        public static void ShowAnimal()
         {
             Console.Clear();
-            foreach (var item in States)
+            foreach (var item in Animals)
             {
-                Console.WriteLine(item.StateToString());
+                Console.WriteLine(item.AnimalToString());
             }
             Console.ReadKey();
         }
 
         //Поиск данных
-        public static void SearchState()
+        public static void SearchAnimal()
         {
             Console.Clear();
             Console.Write("Введите текст для поиска: ");
             string searchText = Console.ReadLine();
 
-            foreach (var item in States)
+            foreach (var item in Animals)
             {
                 if (item.IsContains(searchText))
                 {
-                    Console.WriteLine(item.StateToString());
+                    Console.WriteLine(item.AnimalToString());
                 }
             }
             Console.ReadKey();
