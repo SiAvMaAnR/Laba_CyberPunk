@@ -20,7 +20,7 @@ namespace Program
                     case "1": Logic.AddAnimal(); break;
                     case "2": Logic.ShowAnimal();  break;
                     case "3": Logic.SearchAnimal(); break;
-                    case "4": Environment.Exit(1); break;
+                    case "4": Environment.Exit(0); break;
                 }
             }
         }
