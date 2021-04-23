@@ -61,7 +61,7 @@ namespace LibraryAnimals
         //Вернуть данные о животном
         public override string AnimalToString()
         {
-            return $"{Type}: Название - {Name} / Масса - {Weight} / Возраст - {Age} / Скорость - {Speed} / Пищевой рацион - {FoodRation}";
+            return $"Название - {Name} / Масса - {Weight} / Возраст - {Age} / Скорость - {Speed} / Пищевой рацион - {FoodRation}";
         }
 
         //Проверка на содержание в полях совпадений

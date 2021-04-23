@@ -49,7 +49,7 @@ namespace Program
             Console.Clear();
             foreach (var item in Animals)
             {
-                Console.WriteLine(item.AnimalToString());
+                Console.WriteLine($"{item.GetTypeAnimal()}: {item.AnimalToString()}");
             }
             Console.ReadKey();
         }
