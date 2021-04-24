@@ -67,14 +67,9 @@ namespace LibraryAnimals
         //Проверка на содержание в полях совпадений
         public override bool IsContains(string searchText)
         {
-            if (Name == searchText ||
-                Weight.ToString() == searchText ||
-                Age.ToString() == searchText ||
-                FlightAltitude.ToString() == searchText ||
-                FlightSpeed.ToString() == searchText)
-                return true;
-            else
-                return false;
+            bool isContains = (Name == searchText || Weight.ToString() == searchText || Age.ToString() == searchText || FlightAltitude.ToString() == searchText || FlightSpeed.ToString() == searchText);
+
+            return (isContains) ? true : false;
         }
     }
 }
