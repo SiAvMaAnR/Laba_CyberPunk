@@ -9,7 +9,7 @@ namespace LibraryAnimals
     //Парнокопытное
     public class ClovenHoofed : Animal
     {
-        readonly string Type = "Парнокопытное";
+        private readonly string Type = "Парнокопытное";
 
         //Диаметр копыта
         private int hoofDiameter; 

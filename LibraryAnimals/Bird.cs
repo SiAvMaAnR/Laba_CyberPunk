@@ -9,7 +9,7 @@ namespace LibraryAnimals
     //Птица
     public class Bird: Animal
     {
-        readonly string Type = "Птица";
+        private readonly string Type = "Птица";
 
         //Высота полета
         private int flightAltitude;

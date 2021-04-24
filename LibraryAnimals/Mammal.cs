@@ -9,7 +9,7 @@ namespace LibraryAnimals
     //Млекопитающее
     public class Mammal : Animal
     {
-        readonly string Type = "Млекопитающее";
+        private readonly string Type = "Млекопитающее";
 
         //Скорость
         private int speed;
